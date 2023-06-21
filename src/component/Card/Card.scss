@@ -1,0 +1,79 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.Card
+{
+    width: 38rem;
+    height: 8rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 2rem;
+    padding: 0 1rem;
+    // border: 2px solid red;
+
+    &.active
+    {
+        background-color: #bfbfbf;
+    }
+    
+    img
+    {
+        width: 50px;
+        height: 50px;
+        margin-right: 10px;
+        border-radius: 50px;
+    }
+
+    .Text
+    {
+        color: #000033;
+        margin-left: 1rem;
+
+        &__username
+        {
+            color: #4d4d4d;
+        }
+
+    }
+
+    .buttonBox
+    {
+        position: absolute;
+        right: 1rem;
+        // border: 2px solid green;
+
+
+        button
+        {
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 20px;
+            position: relative;
+            left: 0;
+            top: 0;
+
+            &.follow
+            {
+                background-color: #000033;
+                color: white;
+            }
+
+            &.unfollow
+            {
+                background-color: white;
+                color: #000033;
+                border: 1px solid black;
+            }
+            
+        }
+    }
+
+    
+}

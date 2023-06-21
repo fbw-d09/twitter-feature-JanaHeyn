@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import { Card } from './component';
 
 const users = [
   {
@@ -31,13 +33,25 @@ const users = [
 
 
 function App() {
+	return (
+    <div className='App'>
+      {
+        users.map(({id, userName, name, bio, isFollowing}) => {
+          return(
+            <Card 
+              key={id} 
+              userName={userName}
+              name={name}
+              comment={bio}
+              isFollowing={isFollowing}
+            ></Card>
+          )
+        })
+      }
 
-
-  return (
-    <div className="App">
-        {/* Happy Coding starts here */}
     </div>
   )
+
 }
 
 export default App
