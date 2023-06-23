@@ -4,11 +4,14 @@ import './Card.scss';
 export const Card = ({ userName, name, comment, isFollowing }) => {
 
     const [isFollow, setIsFollow] = useState(isFollowing);
+    const [isActive, setIsActive ] = useState(false);
 
-    // mouseover = background ändert sich von der Card
-    const [isActive, setIsActive ] = useState('false');
-    const toggleClass = (e) => {
-        setIsActive(!isActive);
+    const handleMouseOver = () => {
+        setIsActive(true);
+    }
+  
+    const handleMouseOut = () => {
+      setIsActive(false);
     }
 
     // mouseclick = toggeln für button className (=> und damit styling ändern) und following bzw follow
@@ -19,8 +22,9 @@ export const Card = ({ userName, name, comment, isFollowing }) => {
 
     return (
         <div 
-            className={` ${isActive ? 'active' : 'null'} Card `}
-            onMouseOver={toggleClass}
+            className={`Card ${isActive ? 'active' : 'inactive'}`}
+            onMouseOver={handleMouseOver}
+            onMouseOut={handleMouseOut}
         >
             <img src={`https://unavatar.io/twitter/${userName}`}></img>
             <div className='Text'>

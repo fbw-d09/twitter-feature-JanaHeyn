@@ -19,9 +19,14 @@
 
     &.active
     {
-        background-color: #bfbfbf;
+        background-color: lightgray;
     }
     
+    &.inactive
+    {
+        background-color: none;
+    }
+
     img
     {
         width: 50px;
